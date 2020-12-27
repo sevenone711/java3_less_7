@@ -1,4 +1,7 @@
 package java3_less7;
+
+import java.lang.reflect.InvocationTargetException;
+
 //        1. Создать класс, который может выполнять «тесты»,
 //        в качестве тестов выступают классы с наборами методов с аннотациями @Test.
 //        Для этого у него должен быть статический метод start(),
@@ -14,6 +17,13 @@ package java3_less7;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        Class mt = MyTests.class;
+        try {
+            StartTest.start(mt);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
     }
 }
